@@ -1,0 +1,341 @@
+{
+    "accessors": [
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 124206,
+            "max": [
+                0.999969482421875,
+                0.99981689453125,
+                0.9998779296875
+            ],
+            "min": [
+                -0.999969482421875,
+                -0.99981689453125,
+                -0.999969482421875
+            ],
+            "name": "accessor_buffer_Cube.001_NORMAL_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 73,
+            "max": [
+                0.0,
+                0.0,
+                0.9999619722366333,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                -0.9994294047355652,
+                0.008723939768970013
+            ],
+            "name": "accessor_buffer_Cube_Cube_CubeAction_0",
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 73,
+            "max": [
+                2.999999999999998
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_Cube_CubeAction_time_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 377916,
+            "max": [
+                124205
+            ],
+            "min": [
+                4
+            ],
+            "name": "accessor_buffer_Cube.001_1",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 367308,
+            "max": [
+                124203
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_Cube.001_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 124206,
+            "max": [
+                0.8393248915672302,
+                1.0062538385391235,
+                0.7490905523300171
+            ],
+            "min": [
+                -0.8288387060165405,
+                -1.0062536001205444,
+                -0.775015652179718
+            ],
+            "name": "accessor_buffer_Cube.001_POSITION_0",
+            "type": "VEC3"
+        }
+    ],
+    "animations": [
+        {
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 1,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "name": "CubeAction",
+            "samplers": [
+                {
+                    "input": 2,
+                    "interpolation": "LINEAR",
+                    "output": 1
+                }
+            ]
+        }
+    ],
+    "asset": {
+        "copyright": "",
+        "generator": "blendergltf v1.2.0",
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 1490472,
+            "byteOffset": 0,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Cube.001_POSITION_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1490472,
+            "byteOffset": 1490472,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Cube.001_NORMAL_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1469236,
+            "byteOffset": 2980944,
+            "name": "bufferView_buffer_Cube.001_0",
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1511668,
+            "byteOffset": 4450180,
+            "name": "bufferView_buffer_Cube.001_1",
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 292,
+            "byteOffset": 5961848,
+            "byteStride": 4,
+            "name": "bufferView_buffer_Cube_CubeAction_time_0"
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1168,
+            "byteOffset": 5962140,
+            "byteStride": 16,
+            "name": "bufferView_buffer_Cube_Cube_CubeAction_0"
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 5963308,
+            "name": "buffer_cap-logo",
+            "uri": "buffer_cap-logo.bin"
+        }
+    ],
+    "cameras": [
+        {
+            "name": "Camera",
+            "perspective": {
+                "aspectRatio": 1.703595982340029,
+                "yfov": 0.5033799409866333,
+                "zfar": 100.0,
+                "znear": 0.10000000149011612
+            },
+            "type": "perspective"
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": false,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "Material.001",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0,
+                    0.16202940046787262,
+                    0.4178851246833801,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        },
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": false,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "Material.002",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.004769138526171446,
+                    0.35541728138923645,
+                    0.5585113763809204,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Cube.001",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 0,
+                        "POSITION": 5
+                    },
+                    "indices": 4,
+                    "material": 1,
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": 0,
+                        "POSITION": 5
+                    },
+                    "indices": 3,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "camera": 0,
+            "name": "Camera",
+            "rotation": [
+                0.483536034822464,
+                0.20870360732078552,
+                0.33687159419059753,
+                0.7804827094078064
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                7.481131553649902,
+                -6.5076398849487305,
+                5.34366512298584
+            ]
+        },
+        {
+            "mesh": 0,
+            "name": "Cube",
+            "rotation": [
+                0.0,
+                0.0,
+                8.383845124626532e-05,
+                1.0
+            ],
+            "scale": [
+                5.816246032714844,
+                0.8660978078842163,
+                5.816246032714844
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Lamp",
+            "rotation": [
+                0.16907575726509094,
+                0.27217137813568115,
+                0.7558802962303162,
+                0.570947527885437
+            ],
+            "scale": [
+                1.0,
+                0.9999999403953552,
+                1.0
+            ],
+            "translation": [
+                4.076245307922363,
+                1.0054539442062378,
+                5.903861999511719
+            ]
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "extras": {
+                "active_camera": 0,
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "name": "Scene",
+            "nodes": [
+                1,
+                2,
+                0
+            ]
+        }
+    ]
+}

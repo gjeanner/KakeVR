@@ -1,0 +1,291 @@
+{
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 8712,
+            "max": [
+                1.9423686265945435,
+                0.209170401096344,
+                0.5983906984329224
+            ],
+            "min": [
+                -2.203631639480591,
+                0.07292245328426361,
+                -0.3226093649864197
+            ],
+            "name": "accessor_buffer_CUText_POSITION_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 11604,
+            "max": [
+                8711
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_CUText_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 8712,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "name": "accessor_buffer_CUText_NORMAL_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 97,
+            "max": [
+                3.9999999999999942
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_Text_TextAction.001_time_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 97,
+            "max": [
+                0.0003593018918763846,
+                0.9999999403953552,
+                0.00035904900869354606,
+                0.999998152256012
+            ],
+            "min": [
+                0.0,
+                -0.9995813965797424,
+                -0.0003592229913920164,
+                -0.0
+            ],
+            "name": "accessor_buffer_Text_Text_TextAction.001_0",
+            "type": "VEC4"
+        }
+    ],
+    "animations": [
+        {
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 2,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "name": "TextAction.001",
+            "samplers": [
+                {
+                    "input": 3,
+                    "interpolation": "LINEAR",
+                    "output": 4
+                }
+            ]
+        }
+    ],
+    "asset": {
+        "copyright": "",
+        "generator": "blendergltf v1.2.0",
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 104544,
+            "byteOffset": 0,
+            "byteStride": 12,
+            "name": "bufferView_buffer_CUText_POSITION_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 104544,
+            "byteOffset": 104544,
+            "byteStride": 12,
+            "name": "bufferView_buffer_CUText_NORMAL_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 23212,
+            "byteOffset": 209088,
+            "name": "bufferView_buffer_CUText_0",
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 388,
+            "byteOffset": 232300,
+            "byteStride": 4,
+            "name": "bufferView_buffer_Text_TextAction.001_time_0"
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1552,
+            "byteOffset": 232688,
+            "byteStride": 16,
+            "name": "bufferView_buffer_Text_Text_TextAction.001_0"
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 234240,
+            "name": "buffer_captext",
+            "uri": "buffer_captext.bin"
+        }
+    ],
+    "cameras": [
+        {
+            "name": "Camera",
+            "perspective": {
+                "aspectRatio": 1.703595982340029,
+                "yfov": 0.5033799409866333,
+                "zfar": 100.0,
+                "znear": 0.10000000149011612
+            },
+            "type": "perspective"
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": false,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.64000004529953,
+                    0.64000004529953,
+                    0.64000004529953,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "CUText",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 0
+                    },
+                    "indices": 1,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "camera": 0,
+            "name": "Camera",
+            "rotation": [
+                -0.09062843769788742,
+                -0.8937962651252747,
+                -0.2099730223417282,
+                0.38578000664711
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                -7.481131553649902,
+                5.34366512298584,
+                -6.5076398849487305
+            ]
+        },
+        {
+            "name": "Lamp",
+            "rotation": [
+                -0.34203386306762695,
+                -0.5232755541801453,
+                -0.2841663062572479,
+                0.7269423007965088
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                0.9999999403953552
+            ],
+            "translation": [
+                -4.076245307922363,
+                5.903861999511719,
+                1.0054539442062378
+            ]
+        },
+        {
+            "mesh": 0,
+            "name": "Text",
+            "rotation": [
+                -0.3552433252334595,
+                0.6112480163574219,
+                0.611687421798706,
+                0.35498809814453125
+            ],
+            "scale": [
+                1.0,
+                0.6914958357810974,
+                1.0
+            ],
+            "translation": [
+                0.031366169452667236,
+                0.5582180023193359,
+                -0.614205002784729
+            ]
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "extras": {
+                "active_camera": 0,
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "name": "Scene",
+            "nodes": [
+                2,
+                1,
+                0
+            ]
+        }
+    ]
+}
