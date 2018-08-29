@@ -67,6 +67,8 @@ init: function() {
   
   // this.tick = AFRAME.utilis.throttleTick(this.tick, 500, this)
   
+
+
 },
 tick: function() {
   
@@ -91,6 +93,23 @@ tick: function() {
   });
 }
 })
+
+AFRAME.registerComponent('markerclick', {
+
+  init: function() {
+      const animatedMarker = document.querySelector("#animated-marker");
+      console.log("-------", animatedMarker)
+      animatedMarker.addEventListener('click', function(ev){
+          if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
+              const entity = document.querySelector('#animated-model');
+              const scale = entity.getAttribute('scale');
+              Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
+              
+              // every click, we make our model grow in size
+              entity.setAttribute('scale', scale);
+          }
+      });
+}});
 
 
 
