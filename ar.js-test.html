@@ -25,36 +25,54 @@
       <!-- create your content here. just a box for now -->
       
       <a-assets>
-        <a-asset-item id="cap" src="./gltf/cap-text/captext.gltf"></a-asset-item>
-        <a-asset-item id="caplogo" src="./gltf/cap-logo/cap-logo.gltf"></a-asset-item>
-        <video id="capbrand" loop="true" src="./video/capbrand.m4v" crossorigin ></video>
-        <video id="musique" loop="true" src="./video/doing_it_again.mp4" crossorigin ></video>
+        <a-asset-item id="cap" src="./assets/3D_modele/cap-text/captext.gltf"></a-asset-item>
+        <a-asset-item id="caplogo" src="./assets/3D_modele/cap-logo/cap-logo.gltf"></a-asset-item>
+        <img id="implement" src="./assets/image/non_implement.png">
+        <video id="capbrand" loop="true" src="./assets/video/capbrand.m4v" crossorigin ></video>
+        <video id="musique" loop="true" src="./assets/video/doing_it_again.mp4" crossorigin ></video>
       </a-assets>
-      <!-- use your gltf model -->
+
+      <!-- logo Cap -->
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/cap.patt">
+        <!-- <a-entity gltf-model="#caplogo" scale="0.1 0.1 0.1" animation-mixer></a-entity> -->
+        <!-- <a-entity gltf-model="#caplogo" rotation="0 180 0" scale="0.1 0.1 0.1" animation-mixer></a-entity> -->
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
+      </a-marker>
       
-      
-      <!-- define a camera which will move according to the marker position -->
-      <a-marker markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./marker/pattern/1.patt" class="videoMarker" id="animated-marker">
-        <a-plane  position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+      <!-- Pattern 1 -->
+      <a-marker markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/1.patt" class="videoMarker" id="animated-marker">
+        <!-- <a-plane  position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 0.7;' src='#capbrand' id="animated-model">
-        </a-plane>
+        </a-plane> -->
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
 
-      <!-- <a-marker preset="custom" type="pattern" url="./marker/pattern/3.patt">
-        <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+      <!-- Pattern 2 -->
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/2.patt">
+        <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 0.7;' src='#musique'>
-        </a-plane>
-      </a-marker> -->
+        </a-plane> -->
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
+      </a-marker>
 
-      <a-marker  preset="custom" type="pattern" url="./marker/pattern/4.patt" class="videoMarker">
-        <a-plane position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+      <!-- Pattern 3 -->
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/3.patt">
+        <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 0.7;' src='#musique'>
-        </a-plane>
-        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity>  -->
+        </a-plane> -->
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
+      </a-marker>
+
+      <!-- Pattern 4 -->
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt" class="videoMarker">
+        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> --> 
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
       
-      <a-marker preset="custom" type="pattern" url="./marker/pattern/cap.patt">
-        <a-entity gltf-model="#caplogo" scale="0.1 0.1 0.1" animation-mixer></a-entity> 
+      <!-- Logo engrenage -->
+      <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/gearing.patt" class="videoMarker">
+        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> --> 
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
 
       <!-- <a-entity id="river" geometry="primitive: plane" material="color: blue"

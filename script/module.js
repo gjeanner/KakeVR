@@ -1,58 +1,20 @@
-// AFRAME.registerComponent('artoolkit', {
-//     init: function () {
-//       var sceneEl = document.querySelector('a-scene').querySelector('a-assets')
-
-//       // console.log("Scène :", sceneEl)
-
-//       var video = sceneEl.querySelector('video')
-//       var canvas = document.getElementsByClassName('a-canvas')
-
-//       canvas[0].addEventListener('click', function () {
-        
-//         console.log(video)
-//         console.log(video.id)
-//         console.log("Click --- ")
-//         if (video.paused == true) {
-//           video.play();
-//         } else {
-//           video.pause()
-//         }
-//       }, false)
-//     }
-//   })
-
-/*
-function isPlayingVideo(video) {
-  console.log("Click---------------")
-  if (video.paused == true)
-    video.play()
-  else
-    video.pause()
-}
-*/
-
-
-
-
-
-
-
-
-
-
 
 function playVideo(video){
   if(video){
     if(video.paused){
       video.play()
+      video.muted = true
+      //video.setAttribute('muted', true)
     }
- }
+  }
 }
 
 function pauseVideo(video){
   if(video){
     if(!video.paused){
       video.pause()
+      video.muted = false
+      //video.setAttribute('muted', false)
     }
   }
 }
@@ -65,12 +27,11 @@ init: function() {
   this.markersVisible = []
   this.markersVisible.fill(false, 0, this.markers.length)
   
-  // this.tick = AFRAME.utilis.throttleTick(this.tick, 500, this)
-  
-
+  this.tick = AFRAME.utils.throttleTick(this.tick, 250, this)
 
 },
-tick: function() {
+
+tick: function(t, dt) {
   
   if (!this.markers) return
   var i = 0
@@ -110,19 +71,3 @@ tick: function() {
 //           }
 //       });
 // }});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
