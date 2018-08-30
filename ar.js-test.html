@@ -30,6 +30,10 @@
         <img id="implement" src="./assets/image/non_implement.png">
         <video id="capbrand" loop="true" src="./assets/video/capbrand.m4v" crossorigin ></video>
         <video id="musique" loop="true" src="./assets/video/doing_it_again.mp4" crossorigin ></video>
+        <a-mixin id="text"
+          text="align: center; width: 2; color: black;
+               value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
+        ></a-mixin>
       </a-assets>
 
       <!-- logo Cap Animé -->
@@ -42,7 +46,7 @@
         <a-entity position="0.55 0.4 -0.9" rotation="-90 0 0"
           text="anchor: left; width: 4; color: black; value: Nos valeurs">
         </a-entity>
-        <a-plane position="1 0.2 0" rotation="-90 0 0" color="rgb(232,236,235)" height="1.5" width="1"></a-plane>
+        <a-plane position="1 0.2 0" rotation="-90 0 0" color="rgb(232,236,235)" height="1.5" width="1" material='transparent:true; opacity: 0.7;'></a-plane>
         <a-entity position="0.6 0.4 -0.6" rotation="-90 0 0"
           text="anchor: left; width: 3; color: rgb(255,192,11); value: Honnetete">
         </a-entity>
@@ -64,8 +68,6 @@
         <a-entity position="0.6 0.4 0.6" rotation="-90 0 0"
           text="anchor: left; width: 3; color: rgb(196,215,51); value: Plaisir">
         </a-entity>
-
-        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
       </a-marker>
       
       <!-- Vidéo & Titre -->
@@ -75,21 +77,22 @@
         <a-entity position="-0.7 0.2 0" rotation="-90 0 0"
           text="anchor: left; width: 6; color: black; value: Capgemini">
         </a-entity>
-        <a-plane position="0 0 0" rotation="-90 0 0" color="rgb(232,236,235)" height="0.8" width="1.5"></a-plane>
+        <a-plane position="0 0 0" rotation="-90 0 0" material='opacity: 0.7' color="rgb(232,236,235)" height="0.8" width="1.5"></a-plane>
         <!-- Vidéo -->
         <a-plane  position='-3 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 1;' src='#capbrand' id="animated-model">
         </a-plane>
 
-        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
       </a-marker>
 
       <!-- Pattern 2 -->
+      <!-- Full texte -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/2.patt">
-        <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
-          material='transparent:true; opacity: 0.7;' src='#musique'>
-        </a-plane> -->
-        <a-image rotation="-90 0 0" src="#implement"></a-image>
+        <!-- Texte -->
+        <a-text mixin="text" rotation="-90 0 0" position="0 0.4 0" wrap-count="20"></a-text>
+
+        <!-- Fond -->
+        <a-plane position="0 0 0" rotation="-90 0 0" color="rgb(232,236,235)" height="3" width="2"></a-plane>
       </a-marker>
 
       <!-- Pattern 3 -->
@@ -98,6 +101,12 @@
           material='transparent:true; opacity: 0.7;' src='#musique'>
         </a-plane> -->
         <a-image rotation="-90 0 0" src="#implement"></a-image>
+
+        <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+          material='transparent:true; opacity: 0.7;' src='#musique'>
+        </a-plane> -->
+
+        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
       </a-marker>
 
       <!-- Pattern 4 -->
