@@ -55,6 +55,7 @@ tick: function(t, dt) {
 }
 })
 
+
 // AFRAME.registerComponent('markerclick', {
 
 //   init: function() {
