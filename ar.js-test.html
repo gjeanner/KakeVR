@@ -32,29 +32,56 @@
         <video id="musique" loop="true" src="./assets/video/doing_it_again.mp4" crossorigin ></video>
       </a-assets>
 
-      <!-- logo Cap -->
+      <!-- logo Cap Animé -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/cap.patt">
-        <a-image rotation="-90 0 0" src="#implement"></a-image>
-<!--         <a-entity gltf-model="#caplogo" rotation="0 180 0" scale="0.1 0.1 0.1" animation-mixer></a-entity>
-        <a-entity position="0 0 0" rotation="-90 0 0"
-          text="anchor: left; width: 1.5; color: rgb(255,192,11); value: Honnetete">
+
+        <!-- Logo Cap -->
+        <a-entity position="0 0.4 0" gltf-model="#caplogo" rotation="0 180 0" scale="0.1 0.1 0.1" animation-mixer></a-entity>
+
+        <!-- Message -->
+        <a-entity position="0.55 0.4 -0.9" rotation="-90 0 0"
+          text="anchor: left; width: 4; color: black; value: Nos valeurs">
         </a-entity>
-        <a-entity position="0 0 0" rotation="-90 0 0"
-          text="anchor: left; width: 1.5; color: rgb(217,129,64); value: Audace">
-        </a-entity> -->
-        <!-- <a-entity position="-2.5 1 0"
-          text="anchor: right; width: 1.5; color: rgb(255,192,11); value: Honnêteté">
-        </a-entity> -->
-        
-        <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam -->
+        <a-plane position="1 0.2 0" rotation="-90 0 0" color="rgb(232,236,235)" height="1.5" width="1"></a-plane>
+        <a-entity position="0.6 0.4 -0.6" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(255,192,11); value: Honnetete">
+        </a-entity>
+        <a-entity position="0.6 0.4 -0.4" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(217,129,64); value: Audace">
+        </a-entity>
+        <a-entity position="0.6 0.4 -0.2" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(206,15,51); value: Confiance">
+        </a-entity>
+        <a-entity position="0.6 0.4 0" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(170,7,112); value: Liberte">
+        </a-entity>
+        <a-entity position="0.6 0.4 0.2" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(100,42,132); value: Solidarite">
+        </a-entity>
+        <a-entity position="0.6 0.4 0.4" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(89,151,33); value: Simplicite">
+        </a-entity>
+        <a-entity position="0.6 0.4 0.6" rotation="-90 0 0"
+          text="anchor: left; width: 3; color: rgb(196,215,51); value: Plaisir">
+        </a-entity>
+
+        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
       </a-marker>
       
+      <!-- Vidéo & Titre -->
       <!-- Pattern 1 -->
       <a-marker markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/1.patt" class="videoMarker" id="animated-marker">
-        <!-- <a-plane  position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
-          material='transparent:true; opacity: 0.7;' src='#capbrand' id="animated-model">
-        </a-plane> -->
-        <a-image rotation="-90 0 0" src="#implement"></a-image>
+        <!-- Titre & fond -->
+        <a-entity position="-0.7 0.2 0" rotation="-90 0 0"
+          text="anchor: left; width: 6; color: black; value: Capgemini">
+        </a-entity>
+        <a-plane position="0 0 0" rotation="-90 0 0" color="rgb(232,236,235)" height="0.8" width="1.5"></a-plane>
+        <!-- Vidéo -->
+        <a-plane  position='-3 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+          material='transparent:true; opacity: 1;' src='#capbrand' id="animated-model">
+        </a-plane>
+
+        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
       </a-marker>
 
       <!-- Pattern 2 -->
