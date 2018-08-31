@@ -3,7 +3,7 @@ function playVideo(video){
   if(video){
     if(video.paused){
       video.play()
-      video.muted = true
+      video.muted = false
       //video.setAttribute('muted', true)
     }
   }
@@ -13,7 +13,8 @@ function pauseVideo(video){
   if(video){
     if(!video.paused){
       video.pause()
-      video.muted = false
+      
+      video.muted = true
       //video.setAttribute('muted', false)
     }
   }
