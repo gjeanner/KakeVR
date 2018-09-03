@@ -1,8 +1,40 @@
 body{
     background-color: #f2f0f2;
+    text-align: center;
+    font-family: Calibri;
 }
 
 h1{
-    color: navy;
-    font-family: Calibri;
+    color:  #016fab;
+    font-size: 2.5em;
+    margin-top : 5vw;
+}
+
+.bouton{
+    border: none;
+    text-decoration: none;
+    background-color: #12a9d9;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em;
+    width: 25%;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 3px;
+    
+}
+
+.wrapper{
+   
+    height: 100vh !important;    
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+}
+
+p{
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 1.5em;
 }
