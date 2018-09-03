@@ -11,7 +11,7 @@ function playVideo(video){
 
 function pauseVideo(video){
   if(video){
-    if(!video.paused){
+    if(!video.on){
       video.pause()
       video.muted = false
       //video.setAttribute('muted', false)
@@ -19,13 +19,22 @@ function pauseVideo(video){
   }
 }
 
+
 AFRAME.registerComponent('artoolkit',{
 init: function() {
-  this.markers = document.querySelectorAll("a-marker.videoMarker")
+  this.markersVideo = document.querySelectorAll("a-marker.videoMarker")
   this.videos = document.querySelectorAll("video")
-  console.log(this.markers)
-  this.markersVisible = []
-  this.markersVisible.fill(false, 0, this.markers.length)
+
+  this.markerSong = document.querySelectorAll("a-marker.songMarker")
+  this.songs = document.querySelectorAll("audio")
+
+  console.log(this.markersVideo)
+
+  this.markersVideoVisible = []
+  this.markersVideoVisible.fill(false, 0, this.markersVideo.length)
+
+  this.markersSongVisible = []
+  this.markersSongVisible.fill(false, 0, this.markerSong.length)
   
   this.tick = AFRAME.utils.throttleTick(this.tick, 250, this)
 
@@ -33,42 +42,50 @@ init: function() {
 
 tick: function(t, dt) {
   
-  if (!this.markers) return
+  if (!this.markersVideo) return
   var i = 0
-  this.markers.forEach(marker => {
+  this.markersVideo.forEach(marker => {
     if (marker.object3D.visible) {
-      if (!this.markersVisible[i]) {
+      if (!this.markersVideoVisible[i]) {
           console.log("visible "+ i)
-          this.markersVisible[i] = true
+          this.markersVideoVisible[i] = true
           playVideo(this.videos[i])
       }
     } else {
-      if (this.markersVisible[i]) {
+      if (this.markersVideoVisible[i]) {
           // lost sight of the marker
           console.log("invisible "+ i)
-          this.markersVisible[i] = false
+          this.markersVideoVisible[i] = false
           pauseVideo(this.videos[i])
       }
     }
-    i++;
-  });
+    i++
+  })
+  /*
+
+  if(!this.markerSong) return
+  var j = 0
+  this.markerSong.forEach(marker => {
+    if(marker.object3D.visible) {
+      if(!this.markersSongVisible[j]) {
+        console.log("visible "+ j)
+        this.markersSongVisible[j] = true
+        this.songs[j].components.sound.playSound()
+      }
+    } else {
+      if(this.markersSongVisible[j]) {
+        console.log("invisible "+ j)
+        this.markersSongVisible[j] = false
+        this.songs[j].components.sound.pauseSound()
+      }
+    }
+    j++
+  })
+  */
 }
 })
 
-
-// AFRAME.registerComponent('markerclick', {
-
-//   init: function() {
-//       const animatedMarker = document.querySelector("#animated-marker");
-//       console.log("-------", animatedMarker)
-//       animatedMarker.addEventListener('click', function(ev){
-//           if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
-//               const entity = document.querySelector('#animated-model');
-//               const scale = entity.getAttribute('scale');
-//               Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
-              
-//               // every click, we make our model grow in size
-//               entity.setAttribute('scale', scale);
-//           }
-//       });
-// }});
+/*
+var entity = document.querySelector('[sound]');
+entity.components.sound.stopSound();
+*/

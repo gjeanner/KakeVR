@@ -17,6 +17,7 @@
 </script>
 <script src="./script/module.js"></script>
 <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
 <!-- <body > -->
   <div id="myEmbeddedScene">
@@ -34,14 +35,14 @@
           text="align: center; width: 2; color: black;
                value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
         ></a-mixin>
+        <audio id="willst" src="./assets/sound/Robin_Schulz_Willst_Du_Alligatoah_Instrumental.mp3" preload="auto"></audio>
       </a-assets>
 
+      <!-- Marker 1 : Logo Cap-->
       <!-- logo Cap Animé -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/cap.patt">
-
         <!-- Logo Cap -->
         <a-entity position="0 0.4 0" gltf-model="#caplogo" rotation="0 180 0" scale="0.1 0.1 0.1" animation-mixer></a-entity>
-
         <!-- Message -->
         <a-entity position="0.55 0.4 -0.9" rotation="-90 0 0"
           text="anchor: left; width: 4; color: black; value: Nos valeurs">
@@ -70,9 +71,9 @@
         </a-entity>
       </a-marker>
       
+      <!-- Marker 2 : Chiffre 1 -->
       <!-- Vidéo & Titre -->
-      <!-- Pattern 1 -->
-      <a-marker markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/1.patt" class="videoMarker" id="animated-marker">
+      <a-marker class="videoMarker" markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/1.patt">
         <!-- Titre & fond -->
         <a-entity position="-0.7 0.2 0" rotation="-90 0 0"
           text="anchor: left; width: 6; color: black; value: Capgemini">
@@ -82,26 +83,27 @@
         <a-plane  position='-3 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 1;' src='#capbrand' id="animated-model">
         </a-plane>
-
+        <!-- Vidéo n°2 -->
+        <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+          material='transparent:true; opacity: 0.7;' src='#musique'>
+        </a-plane> -->
       </a-marker>
 
-      <!-- Pattern 2 -->
+      <!-- Marker 3 : Chiffre 2 -->
       <!-- Full texte -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/2.patt">
         <!-- Texte -->
         <a-text mixin="text" rotation="-90 0 0" position="0 0.4 0" wrap-count="20"></a-text>
-
         <!-- Fond -->
         <a-plane position="0 0 0" rotation="-90 0 0" color="rgb(232,236,235)" height="3" width="2"></a-plane>
       </a-marker>
 
-      <!-- Pattern 3 -->
-      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/lecture.patt">
-        <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
-          material='transparent:true; opacity: 0.7;' src='#musique'>
-        </a-plane> -->
-        <a-image rotation="-90 0 0" src="#implement"></a-image>
 
+      <!-- Marker 4 : logo lecture -->
+      <!-- Son / Musique -->
+      <a-marker  class="songMarker" preset="custom" type="pattern" url="./assets/marker/pattern/lecture.patt">
+      
+        
         <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 0.7;' src='#musique'>
         </a-plane> -->
@@ -110,13 +112,13 @@
       </a-marker>
 
       <!-- Pattern 4 -->
-      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt" class="videoMarker">
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt">
         <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> --> 
         <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
       
       <!-- Logo engrenage -->
-      <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/gearing.patt" class="videoMarker">
+      <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/gearing.patt">
         <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> --> 
         <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
