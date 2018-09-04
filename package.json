@@ -5,9 +5,13 @@
         "express": "4.16.3",
         "url": "0.11.0",
         "path": "0.12.7",
-        "cloudant" : "1.10.0-NOTICE"
+        "cloudant": "1.10.0-NOTICE"
     },
     "scripts": {
         "start": "node node_server.js"
+    },
+    "devDependencies": {
+        "aframe-gif-component": "^0.2.0",
+        "aframe-gif-shader": "^0.2.0"
     }
 }
