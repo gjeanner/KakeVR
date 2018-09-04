@@ -17,8 +17,8 @@
 </script>
 <script src="./script/module.js"></script>
 <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
-<script src="aframe-gif-shader.js"></script>
-<script src="aframe-gif-component.js"></script>
+<!-- <script src="aframe-gif-shader.js"></script>
+<script src="aframe-gif-component.js"></script> -->
 <body style='margin : 0px; overflow: hidden;'>
 <!-- <body > -->
   <div id="myEmbeddedScene">
@@ -116,8 +116,9 @@
 
       <!-- Marker 5 : Chiffre 4 -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt">
-        <a-entity position="1 0.5 0" rotation="-90 0 0" geometry="primitive:box" material="shader:gif;src:url(./assets/image/safe.gif);" gif="" transparent="false"></a-entity>
-        <a-entity position="0 0.5 0" rotation="-90 0 0" geometry="primitive:box" material="shader:gif;src:url(./assets/image/capgemini.gif);" gif=""></a-entity>
+        <a-image rotation="-90 0 0" src="#safe" animation></a-image>
+        <!-- <a-entity position="1 0.5 0" rotation="-90 0 0" geometry="primitive:box" material="shader:gif;src:url(./assets/image/safe.gif);" gif="" transparent="false"></a-entity>
+        <a-entity position="0 0.5 0" rotation="-90 0 0" geometry="primitive:box" material="shader:gif;src:url(./assets/image/capgemini.gif);" gif=""></a-entity> -->
 
         <!-- <a-entity position="1 0.5 0" rotation="-90 0 0" geometry="primitive:plane" material="shader:gif;src:url(./assets/image/safe.gif);" gif="" transparent="true"></a-entity> -->
 
@@ -140,9 +141,7 @@
       <a-entity camera id="camera"></a-entity>
 
     </a-scene>
-  
     
 </div>
 
 </body>
-
