@@ -1,9 +1,10 @@
 
 function playVideo(video) {
   if(video){
+    console.log(video)
     if(video.paused){
-      video.muted = true
       video.play()
+      video.muted = false
       //video.setAttribute('muted', true)
     }
   }
@@ -11,9 +12,10 @@ function playVideo(video) {
 
 function pauseVideo(video) {
   if(video){
+    console.log(video)
     if(!video.paused){
-      video.muted = false
       video.pause()
+      video.muted = true
       //video.setAttribute('muted', false)
     }
   }
