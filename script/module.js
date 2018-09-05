@@ -1,22 +1,36 @@
 
-function playVideo(video){
+function playVideo(video) {
   if(video){
     if(video.paused){
+      video.muted = true
       video.play()
-      video.muted = false
       //video.setAttribute('muted', true)
     }
   }
 }
 
-function pauseVideo(video){
+function pauseVideo(video) {
   if(video){
-    if(!video.on){
+    if(!video.paused){
+      video.muted = false
       video.pause()
-      
-      video.muted = true
       //video.setAttribute('muted', false)
     }
+  }
+}
+
+
+function playSong(song) {
+  console.log("Le song lancé ",song)
+  if(song) {
+    song.components.sound.playSound()
+  }
+}
+
+function pauseSong(song) {
+  console.log("Le song qui se pause ",song)
+  if(song) {
+    song.components.sound.pauseSound()
   }
 }
 
@@ -26,16 +40,19 @@ init: function() {
   this.markersVideo = document.querySelectorAll("a-marker.videoMarker")
   this.videos = document.querySelectorAll("video")
 
-  this.markerSong = document.querySelectorAll("a-marker.songMarker")
-  this.songs = document.querySelectorAll("audio")
+  // entity = document.querySelector("a-entity#song")
+  // entity.components.sound.playSound()
 
-  console.log(this.markersVideo)
+  this.markersSong = document.querySelectorAll("a-marker.songMarker")
+  this.songs = document.querySelectorAll("a-entity.song")
+
+  // this.songs[0].components.sound.playSound()
 
   this.markersVideoVisible = []
   this.markersVideoVisible.fill(false, 0, this.markersVideo.length)
 
   this.markersSongVisible = []
-  this.markersSongVisible.fill(false, 0, this.markerSong.length)
+  this.markersSongVisible.fill(false, 0, this.markersSong.length)
   
   this.tick = AFRAME.utils.throttleTick(this.tick, 250, this)
 
@@ -48,41 +65,37 @@ tick: function(t, dt) {
   this.markersVideo.forEach(marker => {
     if (marker.object3D.visible) {
       if (!this.markersVideoVisible[i]) {
-          console.log("visible "+ i)
           this.markersVideoVisible[i] = true
           playVideo(this.videos[i])
       }
     } else {
       if (this.markersVideoVisible[i]) {
-          // lost sight of the marker
-          console.log("invisible "+ i)
           this.markersVideoVisible[i] = false
           pauseVideo(this.videos[i])
       }
     }
     i++
   })
-  /*
 
-  if(!this.markerSong) return
-  var j = 0
-  this.markerSong.forEach(marker => {
-    if(marker.object3D.visible) {
-      if(!this.markersSongVisible[j]) {
-        console.log("visible "+ j)
-        this.markersSongVisible[j] = true
-        this.songs[j].components.sound.playSound()
+  
+  if(!this.markersSong) return
+  var i = 0
+  this.markersSong.forEach(marker => {
+    if (marker.object3D.visible) {
+      if (!this.markersSongVisible[i]) {
+          this.markersSongVisible[i] = true
+          playSong(this.songs[i])
       }
     } else {
-      if(this.markersSongVisible[j]) {
-        console.log("invisible "+ j)
-        this.markersSongVisible[j] = false
-        this.songs[j].components.sound.pauseSound()
+      if (this.markersSongVisible[i]) {
+          this.markersSongVisible[i] = false
+          pauseSong(this.songs[i])
       }
     }
-    j++
+    i++
   })
-  */
+  
+
 }
 })
 

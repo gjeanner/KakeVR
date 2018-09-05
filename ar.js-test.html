@@ -16,9 +16,7 @@
   THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
 </script>
 <script src="./script/module.js"></script>
-<script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
-<!-- <script src="aframe-gif-shader.js"></script>
-<script src="aframe-gif-component.js"></script> -->
+
 <body style='margin : 0px; overflow: hidden;'>
 <!-- <body > -->
   <div id="myEmbeddedScene">
@@ -29,6 +27,7 @@
       <a-assets>
         <a-asset-item id="cap" src="./assets/3D_modele/cap-text/captext.gltf"></a-asset-item>
         <a-asset-item id="caplogo" src="./assets/3D_modele/cap-logo/cap-logo.gltf"></a-asset-item>
+        <a-asset-item id="loading" src="./assets/3D_modele/loading/loading.gltf"></a-asset-item>
         <img id="implement" src="./assets/image/non_implement.png">
         <video id="capbrand" loop="true" src="./assets/video/capbrand.m4v" crossorigin ></video>
         <video id="musique" loop="true" src="./assets/video/doing_it_again.mp4" crossorigin ></video>
@@ -36,9 +35,7 @@
           text="align: center; width: 2; color: black;
                value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
         ></a-mixin>
-        <img id="safe" src="./assets/image/safe.gif">
-
-        <audio id="willst" src="./assets/sound/Robin_Schulz_Willst_Du_Alligatoah_Instrumental.mp3" preload="auto"></audio>
+        <audio id="willst" src="./assets/sound/Robin_Schulz_Willst_Du_Alligatoah_Instrumental.mp3"></audio>
       </a-assets>
 
       <!-- Marker 1 : Logo Cap-->
@@ -84,7 +81,7 @@
         <a-plane position="0 0 0" rotation="-90 0 0" material='opacity: 0.7' color="rgb(232,236,235)" height="0.8" width="1.5"></a-plane>
         <!-- Vidéo -->
         <a-plane  position='-3 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
-          material='transparent:true; opacity: 1;' src='#capbrand' id="animated-model">
+          material='transparent:true; opacity: 1;' src='#capbrand'>
         </a-plane>
         <!-- Vidéo n°2 -->
         <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
@@ -104,44 +101,37 @@
 
       <!-- Marker 4 : logo lecture -->
       <!-- Son / Musique -->
-      <a-marker  class="songMarker" preset="custom" type="pattern" url="./assets/marker/pattern/lecture.patt">
-      
-        
+      <a-marker class="songMarker" preset="custom" type="pattern" url="./assets/marker/pattern/lecture.patt">
+        <!-- Fond -->
+        <a-plane position="0 0.2 0" rotation="-90 0 0" material='opacity: 1' color="black" height="1.5" width="1.5"></a-plane>
+        <!-- Animation -->
+        <a-entity position="-0.5 0.4 0" gltf-model="#loading" rotation="-90 0 0" scale="0.3 0.3 0.3" animation-mixer></a-entity>
+        <!-- Musique -->
+        <a-entity class="song" position="0 0 0" sound="src: #willst;"></a-entity>
+      </a-marker>
+
+
+      <!-- Marker 5 : Chiffre 4 -->
+      <!-- Logo & Texte -->
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt">
+        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> -->
         <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 0.7;' src='#musique'>
         </a-plane> -->
-
-        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
-      </a-marker>
-
-      <!-- Marker 5 : Chiffre 4 -->
-      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt">
-        <a-image rotation="-90 0 0" src="#safe" animation></a-image>
-        <!-- <a-entity position="1 0.5 0" rotation="-90 0 0" geometry="primitive:box" material="shader:gif;src:url(./assets/image/safe.gif);" gif="" transparent="false"></a-entity>
-        <a-entity position="0 0.5 0" rotation="-90 0 0" geometry="primitive:box" material="shader:gif;src:url(./assets/image/capgemini.gif);" gif=""></a-entity> -->
-
-        <!-- <a-entity position="1 0.5 0" rotation="-90 0 0" geometry="primitive:plane" material="shader:gif;src:url(./assets/image/safe.gif);" gif="" transparent="true"></a-entity> -->
-
-        <!-- <a-entity position="0 0.5 0" rotation="-90 0 0" geometry="primitive:plane" material="shader:gif;src:url(./assets/image/capgemini.gif);" gif="" transparent="true"></a-entity> -->
-        
-
-        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> --> 
-        <!-- <a-image rotation="-90 0 0" src="#implement"></a-image> -->
+        <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
       
+      <!-- Marker 6 : Chiffre 4 -->
       <!-- Logo engrenage -->
       <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/gearing.patt">
-        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> --> 
+        <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> -->
         <a-image rotation="-90 0 0" src="#implement"></a-image>
       </a-marker>
 
-      <!-- <a-entity id="river" geometry="primitive: plane" material="color: blue"
-            position="-10 0 0" sound="src: url(./sound/sound.mp3); autoplay: true"></a-entity> -->
-      <!-- <a-marker-camera preset="hiro">  -->   
       <a-entity camera id="camera"></a-entity>
 
     </a-scene>
-    
+
 </div>
 
 </body>
