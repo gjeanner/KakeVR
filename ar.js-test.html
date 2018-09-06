@@ -29,7 +29,8 @@
         <a-asset-item id="caplogo" src="./assets/3D_modele/cap-logo/cap-logo.gltf"></a-asset-item>
         <a-asset-item id="loading" src="./assets/3D_modele/loading/loading.gltf"></a-asset-item>
         <img id="implement" src="./assets/image/non_implement.png">
-        <video webkit-playsinline playsinline id="capbrand" loop="true" src="./assets/video/capbrand.m4v" ></video>
+        <video webkit-playsinline playsinline id="capbrand" loop="true" src="./assets/video/capbrand.m4v"></video>
+        <video webkit-playsinline playsinline id="capge" loop="true" src="./assets/video/Capgemini.mp4"></video>
         <a-mixin id="text"
           text="align: center; width: 2.7; color: white;
                value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
@@ -40,8 +41,7 @@
       <!-- Marker Top : Infinity -->
       <!-- Dev Ops -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/gearing.patt">
-        <a-image rotation="-70 0 0" position="0 0.5 0" scale="10 2 0" src="./assets/image/devops.png"></a-image>
-        <a-image rotation="-90 0 0" position="-1 0 2" scale="2 2 0" src="./assets/image/cloud.jpg"></a-image>
+        <a-image rotation="-110 0 0" position="0 0.5 0" scale="10 2 0" src="./assets/image/devops.png"></a-image>
       </a-marker>
 
       <!-- Marker 1 : Logo Cap-->
@@ -50,45 +50,13 @@
         <!-- Logo Cap -->
         <a-image rotation="-90 0 0" position="0 0 0" scale="3 2 0" src="./assets/image/under_cap_logo.jpg"></a-image>
         <a-entity position="0 0.7 0" gltf-model="#caplogo" rotation="0 180 0" scale="0.1 0.1 0.1" animation-mixer></a-entity>
-        <!-- Message -->
-        <a-entity position="0.55 0.4 -0.9" rotation="-90 0 0"
-          text="anchor: left; width: 4; color: white; value: Nos valeurs">
-        </a-entity>
-        <a-plane position="1 0.2 0" rotation="-90 0 0" color="rgb(232,236,235)" height="1.5" width="1" material='transparent:true; opacity: 0.7;'></a-plane>
-        <a-entity position="0.6 0.4 -0.6" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(255,192,11); value: Honnetete">
-        </a-entity>
-        <a-entity position="0.6 0.4 -0.4" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(217,129,64); value: Audace">
-        </a-entity>
-        <a-entity position="0.6 0.4 -0.2" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(206,15,51); value: Confiance">
-        </a-entity>
-        <a-entity position="0.6 0.4 0" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(170,7,112); value: Liberte">
-        </a-entity>
-        <a-entity position="0.6 0.4 0.2" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(100,42,132); value: Solidarite">
-        </a-entity>
-        <a-entity position="0.6 0.4 0.4" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(89,151,33); value: Simplicite">
-        </a-entity>
-        <a-entity position="0.6 0.4 0.6" rotation="-90 0 0"
-          text="anchor: left; width: 3; color: rgb(196,215,51); value: Plaisir">
-        </a-entity>
       </a-marker>
       
       <!-- Marker 2 : Chiffre 1 -->
-      <!-- Vidéo & Titre -->
-      
+      <!-- Vidéo -->
       <a-marker class="videoMarker" markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/new1.patt">
-        <!-- Titre & fond -->
-        <a-entity position="-0.7 0.2 0" rotation="-90 0 0"
-          text="anchor: left; width: 6; color: white; value: Capgemini">
-        </a-entity>
-        <a-image rotation="-90 0 0" position="0 0 0" scale="1.5 1 0" src="./assets/image/under_title.jpg"></a-image>
         <!-- Vidéo -->
-        <a-plane  position='-3 0.8 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+        <a-plane  position='0 1 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 1;' src='#capbrand'>
         </a-plane>
       </a-marker>
@@ -96,10 +64,12 @@
       <!-- Marker 3 : Chiffre 2 -->
       <!-- Full texte -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/new2.patt">
-        <!-- Texte -->
-        <a-text mixin="text" rotation="-90 0 0" position="0 0.4 0" wrap-count="26"></a-text>
-        <!-- Fond -->
-        <a-image rotation="-90 -90 0" position="0 0 0.5" scale="4 3 0" src="./assets/image/under_text.jpg"></a-image>
+        <a-plane  position='0 0 0' scale="4 3 0" width="2" rotation="-70 0 0" 
+          material='transparent:true; opacity: 1;' src='#capge'>
+        </a-plane>
+
+        <!-- <a-text mixin="text" rotation="-90 0 0" position="0 0.4 0" wrap-count="26"></a-text>
+        <a-image rotation="-90 -90 0" position="0 0 0.5" scale="4 3 0" src="./assets/image/under_text.jpg"></a-image> -->
       </a-marker>
 
 
@@ -119,8 +89,6 @@
       <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/infinity.patt">
         <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> -->
         <a-image rotation="-90 0 0" src="#implement"></a-image>
-        
-        
       </a-marker>
 
       <!-- Marker 6 : Chiffre 3 -->

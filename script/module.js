@@ -12,7 +12,7 @@ function pauseVideo(video) {
   if(video){
     if(!video.paused){
       video.pause()
-      video.muted = true
+      //video.muted = true
     }
   }
 }
