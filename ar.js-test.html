@@ -1,4 +1,4 @@
-
+<meta name="apple-mobile-web-app-capable" content="yes">
 <!-- include A-Frame obviously -->
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 
@@ -29,8 +29,7 @@
         <a-asset-item id="caplogo" src="./assets/3D_modele/cap-logo/cap-logo.gltf"></a-asset-item>
         <a-asset-item id="loading" src="./assets/3D_modele/loading/loading.gltf"></a-asset-item>
         <img id="implement" src="./assets/image/non_implement.png">
-        <video id="capbrand" loop="true" src="./assets/video/capbrand.m4v" crossorigin ></video>
-        <video id="musique" loop="true" src="./assets/video/doing_it_again.mp4" crossorigin ></video>
+        <video webkit-playsinline playsinline id="capbrand" loop="true" src="./assets/video/capbrand.m4v" ></video>
         <a-mixin id="text"
           text="align: center; width: 2.7; color: white;
                value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
@@ -81,6 +80,7 @@
       
       <!-- Marker 2 : Chiffre 1 -->
       <!-- Vidéo & Titre -->
+      
       <a-marker class="videoMarker" markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/new1.patt">
         <!-- Titre & fond -->
         <a-entity position="-0.7 0.2 0" rotation="-90 0 0"
@@ -92,7 +92,7 @@
           material='transparent:true; opacity: 1;' src='#capbrand'>
         </a-plane>
       </a-marker>
-
+      
       <!-- Marker 3 : Chiffre 2 -->
       <!-- Full texte -->
       <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/new2.patt">
@@ -119,6 +119,8 @@
       <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/infinity.patt">
         <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> -->
         <a-image rotation="-90 0 0" src="#implement"></a-image>
+        
+        
       </a-marker>
 
       <!-- Marker 6 : Chiffre 3 -->
