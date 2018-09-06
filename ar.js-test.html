@@ -35,7 +35,7 @@
           text="align: center; width: 2; color: black;
                value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
         ></a-mixin>
-        <audio id="willst" src="./assets/sound/Robin_Schulz_Willst_Du_Alligatoah_Instrumental.mp3"></audio>
+        <audio id="willst" loop="true" src="./assets/sound/Robin_Schulz_Willst_Du_Alligatoah_Instrumental.mp3"></audio>
       </a-assets>
 
       <!-- Marker 1 : Logo Cap-->
@@ -73,7 +73,7 @@
       
       <!-- Marker 2 : Chiffre 1 -->
       <!-- Vidéo & Titre -->
-      <a-marker class="videoMarker" markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/1.patt">
+      <a-marker class="videoMarker" markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/new1.patt">
         <!-- Titre & fond -->
         <a-entity position="-0.7 0.2 0" rotation="-90 0 0"
           text="anchor: left; width: 6; color: black; value: Capgemini">
@@ -91,9 +91,9 @@
 
       <!-- Marker 3 : Chiffre 2 -->
       <!-- Full texte -->
-      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/2.patt">
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/new2.patt">
         <!-- Texte -->
-        <a-text mixin="text" rotation="-90 0 0" position="0 0.4 0" wrap-count="20"></a-text>
+        <a-text mixin="text" rotation="-90 0 0" position="0 0.4 0" wrap-count="16"></a-text>
         <!-- Fond -->
         <a-plane position="0 0 0" rotation="-90 0 0" color="rgb(232,236,235)" height="3" width="2"></a-plane>
       </a-marker>
@@ -101,7 +101,7 @@
 
       <!-- Marker 4 : logo lecture -->
       <!-- Son / Musique -->
-      <a-marker class="songMarker" preset="custom" type="pattern" url="./assets/marker/pattern/lecture.patt">
+      <a-marker class="songMarker" preset="custom" type="pattern" url="./assets/marker/pattern/new3.patt">
         <!-- Fond -->
         <a-plane position="0 0.2 0" rotation="-90 0 0" material='opacity: 1' color="black" height="1.5" width="1.5"></a-plane>
         <!-- Animation -->
@@ -113,7 +113,7 @@
 
       <!-- Marker 5 : Chiffre 4 -->
       <!-- Logo & Texte -->
-      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/4.patt">
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/lecture.patt">
         <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> -->
         <!-- <a-plane id="planeVid" position='0 0 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 0.7;' src='#musique'>
@@ -126,6 +126,20 @@
       <a-marker  preset="custom" type="pattern" url="./assets/marker/pattern/gearing.patt">
         <!-- <a-entity gltf-model="#cap" scale="0.5 0.5 0.5" animation-mixer></a-entity> -->
         <a-image rotation="-90 0 0" src="#implement"></a-image>
+      </a-marker>
+
+
+      <!-- Marker Carte : infinity -->
+      <!-- Full texte -->
+      <a-marker preset="custom" type="pattern" url="./assets/marker/pattern/infinity.patt">
+        <!-- Carte de visite 2x -->
+        <a-image rotation="180 120 180" position="-0.5 0.4 0.5" scale="2 2 0" src="./assets/carte/Face_1.png"></a-image>
+        <a-image rotation="180 -120 180" position="0.5 0.4 0.5" scale="2 2 0" src="./assets/carte/Face_contact.png"></a-image>
+        <a-image rotation="180 0 180" position="0 0.4 -0.4" scale="2 2 0" src="./assets/carte/Face_Formation.png"></a-image>
+        <!-- Carte de visite 3x -->
+        <!-- <a-image rotation="0 0 0" position="0 0.4 1" scale="3 3 0" src="./assets/carte/Face_1.png"></a-image>
+        <a-image rotation="0 -120 0" position="-1 0.4 0" scale="3 3 0" src="./assets/carte/Face_contact.png"></a-image>
+        <a-image rotation="0 120 0" position="1 0.4 0" scale="3 3 0" src="./assets/carte/Face_Formation.png"></a-image> -->
       </a-marker>
 
       <a-entity camera id="camera"></a-entity>
