@@ -3,7 +3,7 @@ function playVideo(video) {
   if(video){
     if(video.paused){
       video.play()
-      video.muted = false
+      //video.muted = false
     }
   }
 }
@@ -12,7 +12,7 @@ function pauseVideo(video) {
   if(video){
     if(!video.paused){
       video.pause()
-      //video.muted = true
+      video.muted = true
     }
   }
 }
