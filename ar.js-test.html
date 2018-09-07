@@ -56,9 +56,22 @@
       <!-- Vidéo -->
       <a-marker class="videoMarker" markerclick cursor="rayOrigin: mouse" emitevents='true' preset="custom" type="pattern" url="./assets/marker/pattern/new1.patt">
         <!-- Vidéo -->
-        <a-plane  position='0 1 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+        <!-- <a-plane  position='0 1 0' scale="2 2 2" width="2" rotation="-90 0 0" 
           material='transparent:true; opacity: 1;' src='#capbrand'>
-        </a-plane>
+        </a-plane> -->
+
+        <!-- <a-plane  position='0 1 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+          material='transparent:true; opacity: 1;' src='#capbrand'>
+        </a-plane> -->
+
+        <a-entity videocomponent geometry="primitive: plane; width: 2" position='0 1 0' scale="2 2 2" width="2" rotation="-90 0 0" 
+          class="video" material='transparent:true; opacity: ;src:#capbrand'
+          ></a-entity> 
+
+        <!-- <a-entity videocomponent class="song" position='0 1 0' scale="2 2 2" 
+          width="2" rotation="-90 0 0" 
+          material='transparent:true; opacity: 1;' src='#capbrand'
+          ></a-entity> -->
       </a-marker>
       
       <!-- Marker 3 : Chiffre 2 -->
@@ -81,7 +94,8 @@
         <!-- Animation -->
         <a-entity position="-0.5 0.4 0" gltf-model="#loading" rotation="-90 0 0" scale="0.3 0.3 0.3" animation-mixer></a-entity>
         <!-- Musique -->
-        <a-entity class="song" position="4 10 5" sound="src: #willst;"></a-entity>
+        <a-entity songcomponent class="song" sound="src: #willst;"></a-entity>
+
       </a-marker>
       
       <!-- Marker 5 : Logo engrenage -->
