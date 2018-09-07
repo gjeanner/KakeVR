@@ -1,8 +1,6 @@
 
 function playVideo(video) {
   if(video){
-    video.play()
-    video.muted = false
     if(video.paused){
       video.play()
       video.muted = false
@@ -12,8 +10,6 @@ function playVideo(video) {
 
 function pauseVideo(video) {
   if(video){
-    video.pause()
-    video.muted = true
     if(!video.paused){
       video.pause()
       video.muted = true
